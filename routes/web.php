@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,4 +26,5 @@ Route::post('/create-account', [RegisterController::class, 'store']);
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'store']);
 
-Route::get('/muro', [PostController::class, 'index'])->name('posts.index');
+Route::get('/feed', [PostController::class, 'index'])->name('posts.index');
+Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
