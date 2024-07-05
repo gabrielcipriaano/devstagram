@@ -10,8 +10,8 @@
     <body class="bg-gray-100">
 
         <header class="p-5 bg-white shadow border-b">
-            <div class="container mx-auto flex justify-between items-center">
-                <h1 class="text-3xl font-black">DevStagram</h1>
+            <div class="container mx-auto flex flex-col gap-5 md:flex-row justify-between items-center">
+                <h1> <a class="text-3xl font-black" href="/">DevStagram</a></h1>
 
                 @auth
                 <nav class="flex gap-5 items-center">
