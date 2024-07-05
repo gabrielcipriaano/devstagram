@@ -26,5 +26,5 @@ Route::post('/create-account', [RegisterController::class, 'store']);
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'store']);
 
-Route::get('/feed', [PostController::class, 'index'])->name('posts.index');
+Route::get('/{user:username}', [PostController::class, 'index'])->name('posts.index');
 Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
